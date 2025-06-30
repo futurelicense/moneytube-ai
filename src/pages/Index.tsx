@@ -9,10 +9,10 @@ import PricingSection from "@/components/PricingSection";
 
 const Index = () => {
   const [timeLeft, setTimeLeft] = useState({
-    days: 5,
-    hours: 14,
-    minutes: 32,
-    seconds: 45
+    days: 1,
+    hours: 8,
+    minutes: 47,
+    seconds: 23
   });
 
   useEffect(() => {
@@ -40,8 +40,8 @@ const Index = () => {
       <section className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-yellow-600/20"></div>
         <div className="relative container mx-auto px-6 py-20 text-center">
-          <Badge className="mb-6 bg-gradient-to-r from-emerald-500 to-yellow-500 text-white border-0 text-lg px-6 py-2 animate-pulse">
-            🚀 EARLY ACCESS - LIMITED TIME
+          <Badge className="mb-6 bg-gradient-to-r from-red-500 to-orange-500 text-white border-0 text-lg px-6 py-2 animate-pulse">
+            🔥 ALMOST SOLD OUT - ONLY 47 SPOTS LEFT!
           </Badge>
           
           <h1 className="text-6xl md:text-8xl font-black text-white mb-6 leading-tight">
@@ -94,30 +94,35 @@ const Index = () => {
           </p>
 
           {/* Countdown Timer */}
-          <div className="bg-black/50 backdrop-blur-sm rounded-2xl p-6 mb-10 max-w-2xl mx-auto">
-            <p className="text-red-400 font-bold text-lg mb-4">⚡ EARLY ACCESS ENDS IN:</p>
+          <div className="bg-gradient-to-r from-red-900/80 to-orange-900/80 backdrop-blur-sm rounded-2xl p-6 mb-10 max-w-2xl mx-auto border-2 border-red-500/50 shadow-2xl">
+            <p className="text-red-300 font-black text-xl mb-2 animate-pulse">🚨 PRICE JUMPS TO $99 IN:</p>
+            <p className="text-orange-300 font-bold text-lg mb-4">⚠️ THEN $149/MONTH FOREVER!</p>
             <div className="flex justify-center gap-4">
               {Object.entries(timeLeft).map(([unit, value]) => (
                 <div key={unit} className="text-center">
-                  <div className="bg-gradient-to-b from-emerald-500 to-emerald-700 text-white text-2xl font-bold rounded-lg p-3 min-w-[60px]">
+                  <div className="bg-gradient-to-b from-red-600 to-red-800 text-white text-3xl font-black rounded-lg p-4 min-w-[70px] shadow-lg animate-pulse border-2 border-red-400">
                     {value.toString().padStart(2, '0')}
                   </div>
-                  <p className="text-gray-400 text-sm mt-1 capitalize">{unit}</p>
+                  <p className="text-red-200 text-sm mt-2 font-bold uppercase tracking-wide">{unit}</p>
                 </div>
               ))}
             </div>
+            <p className="text-red-200 text-sm mt-4 font-bold animate-bounce">
+              ⏰ DON'T MISS OUT - SECURING YOUR $39 RATE NOW!
+            </p>
           </div>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
             <Button 
               size="lg" 
-              className="bg-gradient-to-r from-emerald-600 to-emerald-700 hover:from-emerald-700 hover:to-emerald-800 text-white text-xl px-12 py-6 rounded-full font-bold shadow-2xl transform hover:scale-105 transition-all duration-200"
+              className="bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white text-xl px-12 py-6 rounded-full font-bold shadow-2xl transform hover:scale-105 transition-all duration-200 animate-pulse"
             >
-              🎯 CLAIM YOUR SPOT - $39 (60% OFF!)
+              🔥 SECURE YOUR SPOT - $39 (LAST CHANCE!)
             </Button>
             <p className="text-gray-400">
-              <span className="line-through">$99/month</span> → 
-              <span className="text-emerald-400 font-bold text-xl ml-2">$39/month</span>
+              <span className="line-through text-red-400">$149/month</span> → 
+              <span className="text-red-400 font-bold text-xl ml-2">$39/month</span>
+              <span className="text-red-300 font-bold block text-sm">ENDS IN HOURS!</span>
             </p>
           </div>
 
