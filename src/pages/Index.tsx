@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -57,6 +56,36 @@ const Index = () => {
             <br />
             While You Sleep! 💰
           </h2>
+
+          {/* Intro Video Section */}
+          <div className="max-w-4xl mx-auto mb-12">
+            <Card className="bg-gradient-to-br from-black/70 to-slate-900/70 border-emerald-500/30 overflow-hidden">
+              <CardContent className="p-0">
+                <div className="relative aspect-video bg-gradient-to-br from-emerald-600/20 to-yellow-600/20 flex items-center justify-center">
+                  <div className="absolute inset-0 bg-black/40"></div>
+                  <div className="relative z-10 text-center">
+                    <Button 
+                      size="lg" 
+                      className="bg-gradient-to-r from-emerald-500 to-emerald-600 hover:from-emerald-600 hover:to-emerald-700 text-white rounded-full p-8 mb-4 shadow-2xl transform hover:scale-110 transition-all duration-300"
+                    >
+                      <Play className="w-12 h-12" />
+                    </Button>
+                    <p className="text-white text-xl font-bold mb-2">
+                      🎬 Watch How MoneyTuber Works Its Magic
+                    </p>
+                    <p className="text-gray-300 text-lg">
+                      See Real Results in Just 3 Minutes!
+                    </p>
+                  </div>
+                  <div className="absolute top-4 right-4">
+                    <Badge className="bg-red-500 text-white animate-pulse">
+                      🔴 LIVE DEMO
+                    </Badge>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
           
           <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
             Stop wasting time and thousands of dollars! Our AI creates viral content, 
